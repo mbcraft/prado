@@ -1,7 +1,7 @@
 <?php
 /**
  * TDateTimeStamp class file.
-
+ *
  * @author Fabio Bas ctrlaltca[AT]gmail[DOT]com
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
