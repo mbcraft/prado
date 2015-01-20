@@ -75,5 +75,3 @@ class TWsatBaseGenerator
         }
 
 }
-
-?>
