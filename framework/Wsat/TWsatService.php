@@ -7,8 +7,10 @@
  * @license http://www.pradosoft.com/license/
  * @version $Id$
  * @since 3.3
- * @package Wsat
+ * @package Prado\Wsat
  */
+
+namespace Prado\Wsat;
 
 /**
  * TWsatService class

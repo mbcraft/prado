@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Util
+ * @package Prado\Util
  */
+
+namespace Prado\Util;
 
 /**
  * TSimpleDateFormatter class.
@@ -39,7 +41,7 @@
  * </code>
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Util
+ * @package Prado\Util
  * @since 3.0
  */
 class TSimpleDateFormatter

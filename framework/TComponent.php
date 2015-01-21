@@ -10,8 +10,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System
+ * @package Prado
  */
+
+namespace Prado;
 
 /**
  * TComponent class
@@ -276,7 +278,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Brad Anderson <javalizard@mac.com>
- * @package System
+ * @package Prado
  * @since 3.0
  */
 class TComponent

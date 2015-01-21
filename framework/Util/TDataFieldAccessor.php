@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Util
+ * @package Prado\Util
  */
+
+namespace Prado\Util;
 
 /**
  * TDataFieldAccessor class
@@ -25,7 +27,7 @@
  *   then field 'MyValue.MySubValue' will return that method call result.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Util
+ * @package Prado\Util
  * @since 3.0
  */
 class TDataFieldAccessor

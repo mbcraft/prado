@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Util
+ * @package Prado\Util
  */
+
+namespace Prado\Util;
 
 /**
  * TLogger class.
@@ -17,7 +19,7 @@
  * log categories, and by control.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Util
+ * @package Prado\Util
  * @since 3.0
  */
 class TLogger extends TComponent

@@ -7,8 +7,11 @@
  * @license http://www.pradosoft.com/license/
  * @version $Id$
  * @since 3.3
- * @package Wsat
+ * @package Prado\Wsat
  */
+
+namespace Prado\Wsat;
+
 Prado::using("System.Wsat.TWsatBaseGenerator");
 
 class TWsatARGenerator extends TWsatBaseGenerator

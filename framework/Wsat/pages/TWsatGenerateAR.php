@@ -7,8 +7,11 @@
  * @license http://www.pradosoft.com/license/
  * @version $Id$
  * @since 3.3
- * @package Wsat.pages
+ * @package Prado\Wsat\pages
  */
+
+namespace Prado\Wsat\pages;
+
 Prado::using("System.Wsat.TWsatARGenerator");
 
 class TWsatGenerateAR extends TPage

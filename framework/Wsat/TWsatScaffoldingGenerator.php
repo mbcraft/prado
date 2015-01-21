@@ -6,9 +6,12 @@
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
  * @version $Id$
- * @since 4.0
- * @package Wsat
+ * @since 3.3
+ * @package Prado\Wsat
  */
+
+namespace Prado\Wsat;
+
 Prado::using("System.Wsat.TWsatBaseGenerator");
 
 class TWsatScaffoldingGenerator extends TWsatBaseGenerator

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Util
+ * @package Prado\Util
  */
+
+namespace Prado\Util;
 
 Prado::using('System.Data.TDbConnection');
 
@@ -35,7 +37,7 @@ Prado::using('System.Data.TDbConnection');
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Carl G. Mathisen <carlgmathisen@gmail.com>
- * @package System.Util
+ * @package Prado\Util
  * @since 3.0
  */
 class TLogRouter extends TModule
