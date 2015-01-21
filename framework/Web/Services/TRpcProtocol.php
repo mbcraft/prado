@@ -6,8 +6,10 @@
  * @license http://www.pradosoft.com/license/
  * @version $Id$
  * @since 3.2
- * @package System.Web.Services
+ * @package Prado\Web\Services
  */
+
+namespace Prado\Web\Services;
 
 /**
  * TRpcProtocol class
@@ -18,7 +20,7 @@
  *
  * @author Robin J. Rogge <rrogge@bigpoint.net>
  * @version $Id$
- * @package System.Web.Services
+ * @package Prado\Web\Services
  * @since 3.2
  **/
 abstract class TRpcProtocol

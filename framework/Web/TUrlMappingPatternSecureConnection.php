@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 /**
  * TUrlMappingPatternSecureConnection class
@@ -16,7 +18,7 @@
  * URL prefix behavior that can be used by {@link TUrlMappingPattern::constructUrl()}.
  *
  * @author Yves Berkholz <godzilla80[at]gmx[dot]net>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.2
  */
 class TUrlMappingPatternSecureConnection extends TEnumerable

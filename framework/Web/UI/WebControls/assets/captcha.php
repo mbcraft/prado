@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls.assets
+ * @package Prado\Web\UI\WebControls\assets
  */
+
+namespace Prado\Web\UI\WebControls\assets;
 
 define('THEME_OPAQUE_BACKGROUND',0x0001);
 define('THEME_NOISY_BACKGROUND',0x0002);

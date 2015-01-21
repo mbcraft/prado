@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 /**
  * Includes the THttpResponse adapter.
@@ -59,7 +61,7 @@ Prado::using('System.Web.THttpResponseAdapter');
  * will force the browser to ask for a username and a password.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.0
  */
 class THttpResponse extends TModule implements ITextWriter

@@ -7,8 +7,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 /**
  * TInlineFrameScrollBars class.
@@ -21,7 +23,7 @@
  * - Both: show both horizontal and vertical scroll bars all the time.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0.4
  */
 class TInlineFrameScrollBars extends TEnumerable

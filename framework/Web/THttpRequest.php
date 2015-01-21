@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 Prado::using('System.Web.TUrlManager');
 
@@ -63,7 +65,7 @@ Prado::using('System.Web.TUrlManager');
  * request module. It can be accessed via {@link TApplication::getRequest()}.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.0
  */
 class THttpRequest extends TApplicationComponent implements IteratorAggregate,ArrayAccess,Countable,IModule

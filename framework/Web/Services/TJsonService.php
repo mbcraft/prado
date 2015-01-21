@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.Services
+ * @package Prado\Web\Services
  */
+
+namespace Prado\Web\Services;
 
 /**
  * TJsonService class provides to end-users javascript content response in
@@ -46,7 +48,7 @@
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
  * @author Carl G. Mathisen <carlgmathisen@gmail.com>
- * @package System.Web.Services
+ * @package Prado\Web\Services
  * @since 3.1
  */
 class TJsonService extends TService

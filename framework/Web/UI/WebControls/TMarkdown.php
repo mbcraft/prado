@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 /**
  * Using TTextHighlighter and MarkdownParser classes
@@ -38,7 +40,7 @@ Prado::using('System.3rdParty.Parsedown.Parsedown');
  * and enclosed within a pair of square brackets (e.g. [php]).
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0.1
  */
 class TMarkdown extends TTextHighlighter

@@ -6,9 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
 
+namespace Prado\Web\UI\WebControls;
 
 /**
  * TValidatorDisplayStyle class.
@@ -21,7 +22,7 @@
  * - Fixed: Similar to Dynamic except that the error message physically occupies the page layout (even though it may not be visible)
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0.4
  */
 class TValidatorDisplayStyle extends TEnumerable

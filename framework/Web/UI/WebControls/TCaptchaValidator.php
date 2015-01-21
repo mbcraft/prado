@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 Prado::using('System.Web.UI.WebControls.TBaseValidator');
 Prado::using('System.Web.UI.WebControls.TCaptcha');
@@ -30,7 +32,7 @@ Prado::using('System.Web.UI.WebControls.TCaptcha');
  * the CAPTCHA control that the user input should be compared with.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.1.1
  */
 class TCaptchaValidator extends TBaseValidator

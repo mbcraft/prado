@@ -7,8 +7,10 @@
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
  * @version $Id $
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 /**
  * TUrlManager class
@@ -27,7 +29,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @version $Id $
- * @package System.Web
+ * @package Prado\Web
  * @since 3.0.6
  */
 class TUrlManager extends TModule

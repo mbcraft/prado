@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 /**
  * TDataGridColumn class file
@@ -28,7 +30,7 @@ Prado::using('System.Web.UI.WebControls.TDataGridColumn');
  * If {@link setEncode Encode} is true, the static texts will be HTML-encoded.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0.5
  */
 class TLiteralColumn extends TDataGridColumn

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 Prado::using('System.Web.UI.WebControls.TDataGridColumn');
 Prado::using('System.Web.UI.WebControls.TDropDownList');
@@ -53,7 +55,7 @@ Prado::using('System.Web.UI.WebControls.TDropDownList');
  * datagrid cell is the first child.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0.4
  */
 class TDropDownListColumn extends TDataGridColumn

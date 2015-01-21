@@ -7,8 +7,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI
+ * @package Prado\Web\UI
  */
+
+namespace Prado\Web\UI;
 
 /**
  * TClientScriptManager class.
@@ -17,7 +19,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Gabor Berczi <gabor.berczi@devworx.hu> (lazyload additions & progressive rendering)
- * @package System.Web.UI
+ * @package Prado\Web\UI
  * @since 3.0
  */
 class TClientScriptManager extends TApplicationComponent

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 Prado::using('System.Web.UI.WebControls.TDataList');
 Prado::using('System.Web.UI.WebControls.TItemDataRenderer');
@@ -25,7 +27,7 @@ Prado::using('System.Web.UI.WebControls.TItemDataRenderer');
  * which allows TDataList to apply CSS styles to the renders.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.1.0
  */
 class TDataListItemRenderer extends TItemDataRenderer implements IStyleable

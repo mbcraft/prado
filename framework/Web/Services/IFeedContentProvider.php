@@ -8,8 +8,10 @@
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
  * @version $Id$
- * @package System.Web.Services
+ * @package Prado\Web\Services
  */
+
+namespace Prado\Web\Services;
 
 /**
  * IFeedContentProvider interface.
@@ -19,7 +21,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Knut Urdalen <knut.urdalen@gmail.com>
- * @package System.Web.Services
+ * @package Prado\Web\Services
  * @since 3.1
  */
 interface IFeedContentProvider

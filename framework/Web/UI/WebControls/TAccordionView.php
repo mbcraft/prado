@@ -6,9 +6,11 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.2
  */
+
+namespace Prado\Web\UI\WebControls;
 
 /**
  * Class TAccordionView.
@@ -20,7 +22,7 @@
  * {@link setNavigateUrl NavigateUrl} property to define the destination url.
  *
  * @author Gabor Berczi, DevWorx Hungary <gabor.berczi@devworx.hu>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.2
  */
 class TAccordionView extends TWebControl

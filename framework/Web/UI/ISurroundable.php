@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI
+ * @package Prado\Web\UI
  */
+
+namespace Prado\Web\UI;
 
 /**
  * ISurroundable interface
@@ -15,7 +17,7 @@
  * Identifies controls that may create an additional surrounding tag. The id of the
  * tag can be obtained with {@link getSurroundingTagID}.
  *
- * @package System.Web.UI
+ * @package Prado\Web\UI
  * @since 3.1.2
  */
 interface ISurroundable

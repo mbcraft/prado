@@ -6,15 +6,17 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  */
+
+namespace Prado\Web\UI\WebControls;
 
 /**
  * TWizardStepNavigationTemplate class.
  * TWizardStepNavigationTemplate is the template used as default wizard step navigation panel.
  * It consists of three buttons, Previous, Next and Cancel.
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web.UI.WebControls
+ * @package Prado\Web\UI\WebControls
  * @since 3.0
  */
 class TWizardStepNavigationTemplate extends TWizardNavigationTemplate

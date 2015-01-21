@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 /**
  * TUri class
@@ -25,7 +27,7 @@
  * - fragment: anchor
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.0
  */
 class TUri extends TComponent

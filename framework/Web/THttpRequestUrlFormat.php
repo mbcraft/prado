@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  */
+
+namespace Prado\Web;
 
 /**
  * THttpRequestUrlFormat class.
@@ -20,7 +22,7 @@
  * - HiddenPath: the URL format is like /path/to/name1,value1/name2,value2...
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.0.4
  */
 class THttpRequestUrlFormat extends TEnumerable

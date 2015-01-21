@@ -7,9 +7,11 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web
+ * @package Prado\Web
  * @since 3.1.1
  */
+
+namespace Prado\Web;
 
 /**
  * TCacheHttpSession class
@@ -35,7 +37,7 @@
  *
  * @author Carl G. Mathisen <carlgmathisen@gmail.com>
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Web
+ * @package Prado\Web
  * @since 3.1.1
  */
 class TCacheHttpSession extends THttpSession

@@ -6,8 +6,10 @@
  * @license http://www.pradosoft.com/license/
  * @version $Id$
  * @since 3.2
- * @package System.Web.Services
+ * @package Prado\Web\Services
  */
+
+namespace Prado\Web\Services;
 
 /**
  * TJsonRpcProtocol class
@@ -19,7 +21,7 @@
  * @author Robin J. Rogge <rrogge@bigpoint.net>
  * @author Fabio Bas <ctrlaltca@gmail.com>
  * @version $Id$
- * @package System.Web.Services
+ * @package Prado\Web\Services
  * @since 3.2
  */
 class TJsonRpcProtocol extends TRpcProtocol
