@@ -6,7 +6,6 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @package Prado\Data\DataGateway
  */
 
@@ -18,7 +17,6 @@ namespace Prado\Data\DataGateway;
  * {@link setResult Result} property.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @version $Id$
  * @package Prado\Data\DataGateway
  * @since 3.1
  */

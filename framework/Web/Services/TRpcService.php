@@ -4,7 +4,6 @@
  * @link http://www.pradosoft.com/
  * @copyright 2010 Bigpoint GmbH
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @since 3.2
  * @package Prado\Web\Services
  */
@@ -51,7 +50,6 @@ namespace Prado\Web\Services;
  * the specified class will be instanciated in order to satisfy the request.
  *
  * @author Robin J. Rogge <rrogge@bigpoint.net>
- * @version $Id$
  * @package Prado\Web\Services
  * @since 3.2
  **/

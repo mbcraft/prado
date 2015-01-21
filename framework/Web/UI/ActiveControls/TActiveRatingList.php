@@ -7,7 +7,6 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @package Prado\Web\UI\ActiveControls
  */
 
@@ -20,7 +19,6 @@ namespace Prado\Web\UI\ActiveControls;
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
  * @author Bradley Booms <bradley[dot]booms[at]gmail[dot]com>
- * @version $Id$
  * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */

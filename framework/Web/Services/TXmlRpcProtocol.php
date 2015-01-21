@@ -4,7 +4,6 @@
  * @link http://www.pradosoft.com/
  * @copyright 2010 Bigpoint GmbH
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @since 3.2
  * @package Prado\Web\Services
  */
@@ -18,7 +17,6 @@ namespace Prado\Web\Services;
  * It's basically a wrapper to the xmlrpc_server_* family of php methods.
  *
  * @author Robin J. Rogge <rrogge@bigpoint.net>
- * @version $Id$
  * @package Prado\Web\Services
  * @since 3.2
  */

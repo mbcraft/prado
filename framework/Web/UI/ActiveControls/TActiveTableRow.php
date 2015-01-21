@@ -7,7 +7,6 @@
  * @copyright Copyright &copy; 2009 LANDWEHR Computer und Software GmbH
  * @license http://www.pradosoft.com/license/
  * @package Prado\Web\UI\ActiveControls
- * @version $Id$
  */
 
 namespace Prado\Web\UI\ActiveControls;
@@ -49,7 +48,6 @@ Prado::using('System.Web.UI.ActiveControls.TCallbackEventParameter');
  *
  * @author LANDWEHR Computer und Software GmbH <programmierung@landwehr-software.de>
  * @package Prado\Web\UI\ActiveControls
- * @version $Id$
  * @since 3.1.9
  */
 class TActiveTableRow extends TTableRow implements ICallbackEventHandler, IActiveControl

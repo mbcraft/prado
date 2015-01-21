@@ -6,7 +6,6 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @package Prado\Data\ActiveRecord\Relations
  */
 
@@ -64,7 +63,6 @@ Prado::using('System.Data.ActiveRecord.Relations.TActiveRecordRelation');
  * arguments as other finder methods of TActiveRecord, e.g. <tt>with_players('age < ?', 35)</tt>.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @version $Id$
  * @package Prado\Data\ActiveRecord\Relations
  * @since 3.1
  */

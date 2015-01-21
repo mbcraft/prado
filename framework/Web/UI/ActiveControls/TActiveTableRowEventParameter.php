@@ -7,7 +7,6 @@
  * @copyright Copyright &copy; 2009 LANDWEHR Computer und Software GmbH
  * @license http://www.pradosoft.com/license/
  * @package Prado\Web\UI\ActiveControls
- * @version $Id$
  */
 
 namespace Prado\Web\UI\ActiveControls;

@@ -7,7 +7,6 @@
  * @link http://www.schlaue-kids.net/
  * @copyright Copyright &copy; 2010 Schlaue-Kids.net
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @package Prado\Web\UI
  */
 
@@ -26,7 +25,6 @@ Prado::using('System.Web.UI.TTemplateControl');
  *
  * @author Schlaue-Kids.net <info@schlaue-kids.net>
  * @author Kyle Caine <http://www.pradosoft.com/forum/index.php?action=profile;u=1752>
- * @version $Id$
  * @package Prado\Web\UI
  * @since 3.1.8
  */

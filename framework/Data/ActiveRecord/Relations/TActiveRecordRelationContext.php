@@ -6,7 +6,6 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @package Prado\Data\ActiveRecord\Relations
  */
 
@@ -21,7 +20,6 @@ namespace Prado\Data\ActiveRecord\Relations;
  * constructor.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @version $Id$
  * @package Prado\Data\ActiveRecord\Relations
  * @since 3.1
  */

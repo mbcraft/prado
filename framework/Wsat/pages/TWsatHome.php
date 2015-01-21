@@ -5,7 +5,6 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @version $Id$
  * @since 3.3
  * @package Prado\Wsat\pages
  */
