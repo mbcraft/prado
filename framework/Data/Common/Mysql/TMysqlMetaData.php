@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common.Mysql
+ * @package Prado\Data\Common\Mysql
  */
+
+namespace Prado\Data\Common\Mysql;
 
 /**
  * Load the base TDbMetaData class.
@@ -22,7 +24,7 @@ Prado::using('System.Data.Common.Mysql.TMysqlTableInfo');
  * See http://netevil.org/node.php?nid=795&SC=1
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Common.Mysql
+ * @package Prado\Data\Common\Mysql
  * @since 3.1
  */
 class TMysqlMetaData extends TDbMetaData

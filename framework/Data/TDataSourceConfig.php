@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data
+ * @package Prado\Data
  */
+
+namespace Prado\Data;
 
 Prado::using('System.Data.TDbConnection');
 
@@ -41,7 +43,7 @@ Prado::using('System.Data.TDbConnection');
  * that extends the TDbConnection class.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data
+ * @package Prado\Data
  * @since 3.1
  */
 class TDataSourceConfig extends TModule

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Collections
+ * @package Prado\Collections
  */
+
+namespace Prado\Collections;
 
 /**
  * TList class
@@ -31,7 +33,7 @@
  * operation, override {@link insertAt()}, and {@link removeAt()}.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Collections
+ * @package Prado\Collections
  * @since 3.0
  */
 class TList extends TComponent implements IteratorAggregate,ArrayAccess,Countable

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.SqlMap.Statements
+ * @package Prado\Data\SqlMap\Statements
  */
+
+namespace Prado\Data\SqlMap\Statements;
 
 Prado::using('System.Data.Common.TDbMetaData');
 Prado::using('System.Data.Common.TDbCommandBuilder');
@@ -16,7 +18,7 @@ Prado::using('System.Data.Common.TDbCommandBuilder');
  * TPreparedCommand class.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.SqlMap.Statements
+ * @package Prado\Data\SqlMap\Statements
  * @since 3.1
  */
 class TPreparedCommand

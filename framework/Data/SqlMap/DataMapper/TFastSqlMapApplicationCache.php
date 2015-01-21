@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.SqlMap
+ * @package Prado\Data\SqlMap\DataMapper
  */
+
+namespace Prado\Data\SqlMap\DataMapper;
 
 /**
  * TFastSqlMapApplicationCache class file
@@ -15,7 +17,7 @@
  * Fast SqlMap result cache class with minimal-concurrency get/set and atomic flush operations
  *
  * @author Berczi Gabor <gabor.berczi@devworx.hu>
- * @package System.Data.SqlMap
+ * @package Prado\Data\SqlMap\DataMapper
  * @since 3.2
  */
 

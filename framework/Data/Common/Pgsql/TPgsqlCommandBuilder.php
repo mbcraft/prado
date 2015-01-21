@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common
+ * @package Prado\Data\Common\Pgsql
  */
+
+namespace Prado\Data\Common\Pgsql;
 
 Prado::using('System.Data.Common.TDbCommandBuilder');
 
@@ -16,7 +18,7 @@ Prado::using('System.Data.Common.TDbCommandBuilder');
  * for Pgsql database.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Common
+ * @package Prado\Data\Common\Pgsql
  * @since 3.1
  */
 class TPgsqlCommandBuilder extends TDbCommandBuilder

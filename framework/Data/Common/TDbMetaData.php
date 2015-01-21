@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common
+ * @package Prado\Data\Common
  */
+
+namespace Prado\Data\Common;
 
 /**
  * TDbMetaData is the base class for retrieving metadata information, such as
@@ -16,7 +18,7 @@
  * Use the {@link getTableInfo} method to retrieve a table information.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Common
+ * @package Prado\Data\Common
  * @since 3.1
  */
 abstract class TDbMetaData extends TComponent

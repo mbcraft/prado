@@ -5,8 +5,11 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord.Scaffold.InputBuilder
+  * @package Prado\Data\ActiveRecord\Scaffold\InputBuilder
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold\InputBuilder;
+
 class TScaffoldInputBase
 {
 	const DEFAULT_ID = 'scaffold_input';

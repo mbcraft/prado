@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.SqlMap
+ * @package Prado\Data\SqlMap\DataMapper
  */
+
+namespace Prado\Data\SqlMap\DataMapper;
 
 /**
  * Allow different implementation of caching strategy. See <tt>TSqlMapFifoCache</tt>
@@ -15,7 +17,7 @@
  * a least-recently-used cache implementation.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Data.SqlMap
+ * @package Prado\Data\SqlMap\DataMapper
  * @since 3.1
  */
 abstract class TSqlMapCache implements ICache

@@ -7,8 +7,10 @@
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
  * @version $Id$
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold;
 
 /**
  * Import the scaffold base.
@@ -30,7 +32,7 @@ Prado::using('System.Data.ActiveRecord.Scaffold.TScaffoldBase');
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
  * @version $Id$
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  * @since 3.1
  */
 class TScaffoldSearch extends TScaffoldBase

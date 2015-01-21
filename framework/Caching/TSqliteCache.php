@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Caching
+ * @package Prado\Caching
  */
+
+namespace Prado\Caching;
 
 /**
  * TSqliteCache class
@@ -66,7 +68,7 @@
  * SQLite DB file (in the namespace format).
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Caching
+ * @package Prado\Caching
  * @since 3.0
  */
 class TSqliteCache extends TCache

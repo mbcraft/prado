@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common.Mssql
+ * @package Prado\Data\Common\Mssql
  */
+
+namespace Prado\Data\Common\Mssql;
 
 /**
  * Loads the base TDbTableInfo class and TMssqlTableColumn class.
@@ -19,7 +21,7 @@ Prado::using('System.Data.Common.Mssql.TMssqlTableColumn');
  * TMssqlTableInfo class provides additional table information for Mssql database.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Common.Mssql
+ * @package Prado\Data\Common\Mssql
  * @since 3.1
  */
 class TMssqlTableInfo extends TDbTableInfo

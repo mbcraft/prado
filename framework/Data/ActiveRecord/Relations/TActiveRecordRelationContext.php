@@ -7,8 +7,10 @@
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
  * @version $Id$
- * @package System.Data.ActiveRecord.Relations
+ * @package Prado\Data\ActiveRecord\Relations
  */
+
+namespace Prado\Data\ActiveRecord\Relations;
 
 /**
  * TActiveRecordRelationContext holds information regarding record relationships
@@ -20,7 +22,7 @@
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
  * @version $Id$
- * @package System.Data.ActiveRecord.Relations
+ * @package Prado\Data\ActiveRecord\Relations
  * @since 3.1
  */
 class TActiveRecordRelationContext

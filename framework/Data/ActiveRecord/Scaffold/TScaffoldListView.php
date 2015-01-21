@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold;
 
 /**
  * Load the scaffold base class.
@@ -43,7 +45,7 @@ Prado::using('System.Data.ActiveRecord.Scaffold.TScaffoldBase');
  * Parameters property of TActiveRecordCriteria.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  * @since 3.1
  */
 class TScaffoldListView extends TScaffoldBase

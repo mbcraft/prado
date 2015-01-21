@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.SqlMap.Statements
+ * @package Prado\Data\SqlMap\Statements
  */
+
+namespace Prado\Data\SqlMap\Statements;
 
 /**
  * TMappedStatement class executes SQL mapped statements. Mapped Statements can
@@ -16,7 +18,7 @@
  * This class is usualy instantiated during SQLMap configuration by TSqlDomBuilder.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Data.SqlMap.Statements
+ * @package Prado\Data\SqlMap\Statements
  * @since 3.0
  */
 class TMappedStatement extends TComponent implements IMappedStatement

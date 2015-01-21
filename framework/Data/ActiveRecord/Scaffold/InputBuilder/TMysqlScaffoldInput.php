@@ -5,8 +5,11 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord.Scaffold.InputBuilder
+  * @package Prado\Data\ActiveRecord\Scaffold\InputBuilder
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold\InputBuilder;
+
 Prado::using('System.Data.ActiveRecord.Scaffold.InputBuilder.TScaffoldInputCommon');
 
 class TMysqlScaffoldInput extends TScaffoldInputCommon

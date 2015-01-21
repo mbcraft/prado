@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Collections
+ * @package Prado\Collections
  */
+
+namespace Prado\Collections;
 
 /**
  * TPriorityList class
@@ -42,7 +44,7 @@
  * override {@link insertAtIndexInPriority()} and {@link removeAtIndexInPriority()} and then call the parent.
  *
  * @author Brad Anderson <javalizard@gmail.com>
- * @package System.Collections
+ * @package Prado\Collections
  * @since 3.2a
  */
 class TPriorityList extends TList

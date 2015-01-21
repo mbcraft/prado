@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common.Oracle
+ * @package Prado\Data\Common\Oracle
  */
+
+namespace Prado\Data\Common\Oracle;
 
 /**
  * Load common TDbTableCommon class.
@@ -18,7 +20,7 @@ Prado::using('System.Data.Common.TDbTableColumn');
  * Describes the column metadata of the schema for a PostgreSQL database table.
  *
  * @author Marcos Nobre <marconobre[at]gmail[dot]com>
- * @package System.Data.Common.Oracle
+ * @package Prado\Data\Common\Oracle
  * @since 3.1
  */
 class TOracleTableColumn extends TDbTableColumn

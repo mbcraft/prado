@@ -6,15 +6,17 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord
+ * @package Prado\Data\ActiveRecord
  */
+
+namespace Prado\Data\ActiveRecord;
 
 /**
  * TActiveRecordGateway excutes the SQL command queries and returns the data
  * record as arrays (for most finder methods).
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.ActiveRecord
+ * @package Prado\Data\ActiveRecord
  * @since 3.1
  */
 class TActiveRecordGateway extends TComponent

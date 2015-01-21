@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold;
 
 /**
  * Include the base Active Record class.
@@ -25,7 +27,7 @@ Prado::using('System.Data.ActiveRecord.TActiveRecord');
  * file explicitly.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  * @since 3.1
  */
 abstract class TScaffoldBase extends TTemplateControl

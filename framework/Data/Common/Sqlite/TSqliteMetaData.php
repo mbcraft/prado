@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common.Sqlite
+ * @package Prado\Data\Common\Sqlite
  */
+
+namespace Prado\Data\Common\Sqlite;
 
 /**
  * Load the base TDbMetaData class.
@@ -19,7 +21,7 @@ Prado::using('System.Data.Common.Sqlite.TSqliteTableInfo');
  * TSqliteMetaData loads SQLite database table and column information.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Commom.Sqlite
+ * @package Prado\Data\Common\Sqlite
  * @since 3.1
  */
 class TSqliteMetaData extends TDbMetaData

@@ -6,14 +6,16 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common
+ * @package Prado\Data\Common
  */
+
+namespace Prado\Data\Common;
 
 /**
  * TDbTableColumn class describes the column meta data of the schema for a database table.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.Common
+ * @package Prado\Data\Common
  * @since 3.1
  */
 class TDbTableColumn extends TComponent

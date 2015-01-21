@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.DataGateway
+ * @package Prado\Data\DataGateway
  */
+
+namespace Prado\Data\DataGateway;
 
 /**
  * Search criteria for TDbDataGateway.
@@ -24,7 +26,7 @@
  * </code>
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.DataGateway
+ * @package Prado\Data\DataGateway
  * @since 3.1
  */
 class TSqlCriteria extends TComponent

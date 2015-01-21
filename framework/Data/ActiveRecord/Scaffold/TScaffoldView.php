@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  */
+
+namespace Prado\Data\ActiveRecord\Scaffold;
 
 /**
  * Import scaffold base, list, edit and search controls.
@@ -34,7 +36,7 @@ Prado::using('System.Data.ActiveRecord.Scaffold.TScaffoldSearch');
  * the Active Record class to be displayed/edited/added.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Data.ActiveRecord.Scaffold
+  * @package Prado\Data\ActiveRecord\Scaffold
  * @since 3.0
  */
 class TScaffoldView extends TScaffoldBase

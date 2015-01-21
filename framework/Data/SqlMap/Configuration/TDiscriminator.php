@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.SqlMap.Configuration
+ * @package Prado\Data\SqlMap\Configuration
  */
+
+namespace Prado\Data\SqlMap\Configuration;
 
 /**
  * The TDiscriminator corresponds to the <discriminator> tag within a <resultMap>.
@@ -20,7 +22,7 @@
  * the object data.
  *
  * @author Wei Zhuo <weizho[at]gmail[dot]com>
- * @package System.Data.SqlMap.Configuration
+ * @package Prado\Data\SqlMap\Configuration
  * @since 3.1
  */
 class TDiscriminator extends TComponent

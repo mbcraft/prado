@@ -7,17 +7,19 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Data.Common
+ * @package Prado\Data\Common\Oracle
  */
 
-Prado :: using('System.Data.Common.TDbCommandBuilder');
+namespace Prado\Data\Common\Oracle;
+
+Prado::using('System.Data.Common.TDbCommandBuilder');
 
 /**
  * TOracleCommandBuilder provides specifics methods to create limit/offset query commands
  * for Oracle database.
  *
  * @author Marcos Nobre <marconobre[at]gmail[dot]com>
- * @package System.Data.Common
+ * @package Prado\Data\Common\Oracle
  * @since 3.1
  */
 class TOracleCommandBuilder extends TDbCommandBuilder {
