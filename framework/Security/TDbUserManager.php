@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Security
+ * @package Prado\Security
  */
+
+namespace Prado\Security;
 
 /**
  * Using IUserManager interface
@@ -43,7 +45,7 @@ Prado::using('System.Security.TUser');
  * which specifies how to establish database connection to retrieve user information.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Security
+ * @package Prado\Security
  * @since 3.1.0
  */
 class TDbUserManager extends TModule implements IUserManager

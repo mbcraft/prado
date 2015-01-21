@@ -6,8 +6,11 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Security
+ * @package Prado\Security
  */
+
+namespace Prado\Security;
+
 /**
  * TAuthorizationRule class
  *
@@ -24,7 +27,7 @@
  * IP rules are separated by comma ',' and can contain wild card in the rules (e.g. '192.132.23.33, 192.122.*.*')
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Security
+ * @package Prado\Security
  * @since 3.0
  */
 class TAuthorizationRule extends TComponent

@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.I18N
+ * @package Prado\I18N
  */
+
+namespace Prado\I18N;
 
 /**
  * Get the MessageFormat class.
@@ -22,7 +24,7 @@ Prado::using('System.I18N.core.MessageFormat');
  *
  * @author Xiang Wei Zhuo <weizhuo[at]gmail[dot]com>
  * @version v1.0, last update on Tue Dec 28 11:54:48 EST 2004
- * @package System.I18N
+ * @package Prado\I18N
  */
 class Translation extends TComponent
 {

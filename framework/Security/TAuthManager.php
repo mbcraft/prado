@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Security
+ * @package Prado\Security
  */
+
+namespace Prado\Security;
 
 /**
  * Using IUserManager interface
@@ -36,7 +38,7 @@ Prado::using('System.Security.IUserManager');
  * <module id="users" class="System.Security.TUserManager" />
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package System.Security
+ * @package Prado\Security
  * @since 3.0
  */
 class TAuthManager extends TModule

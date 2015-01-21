@@ -6,9 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.I18N
+ * @package Prado\I18N
  */
 
+namespace Prado\I18N;
 
 /**
  * TGlobalization contains settings for Culture, Charset
@@ -20,7 +21,7 @@
  *
  * @author Wei Zhuo<weizhuo[at]gmail[dot]com>
  * @version $Revision: 1.66 $  $Date: ${DATE} ${TIME} $
- * @package System.I18N
+ * @package Prado\I18N
  * @since 3.0
  */
 class TGlobalization extends TModule

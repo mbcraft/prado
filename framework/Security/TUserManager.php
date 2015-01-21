@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Security
+ * @package Prado\Security
  */
+
+namespace Prado\Security;
 
 /**
  * Using TUser class
@@ -63,7 +65,7 @@ Prado::using('System.Security.TUser');
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @author Carl Mathisen <carl@kamikazemedia.no>
- * @package System.Security
+ * @package Prado\Security
  * @since 3.0
  */
 class TUserManager extends TModule implements IUserManager
