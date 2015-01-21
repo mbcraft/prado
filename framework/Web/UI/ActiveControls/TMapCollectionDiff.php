@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * TMapCollectionDiff class.
@@ -15,7 +17,7 @@
  * Calculate the changes to attributes collection.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 class TMapCollectionDiff extends TViewStateDiff

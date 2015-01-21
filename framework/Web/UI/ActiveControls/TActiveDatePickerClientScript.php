@@ -7,8 +7,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * TActiveDatePickerClientScript class.
@@ -23,7 +25,7 @@
  * as parameter to this event
  *
  * @author Fabio Bas <ctrlaltca[at]gmail[dot]com>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.2.1
  */
 class TActiveDatePickerClientScript extends TCallbackClientSide

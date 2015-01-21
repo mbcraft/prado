@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * Load active list control adapter
@@ -20,7 +22,7 @@ Prado::using('System.Web.UI.ActiveControls.TActiveListControlAdapter');
  * List items can be added dynamically during a callback request.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 class TActiveListBox extends TListBox implements IActiveControl, ICallbackEventHandler

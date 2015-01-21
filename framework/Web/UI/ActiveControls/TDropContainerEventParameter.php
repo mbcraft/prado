@@ -6,8 +6,10 @@
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * TDropContainerEventParameter class
@@ -18,7 +20,7 @@
  * @author Christophe BOULAIN (Christophe.Boulain@ceram.fr)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
 class TDropContainerEventParameter extends TEventParameter
 {

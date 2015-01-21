@@ -6,9 +6,11 @@
  * @link http://www.landwehr-software.de/
  * @copyright Copyright &copy; 2009 LANDWEHR Computer und Software GmbH
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @version $Id$
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * TActiveTableCellEventParameter class.
@@ -24,7 +26,7 @@
  * happen though since an exception is thrown before).
  *
  * @author LANDWEHR Computer und Software GmbH <programmierung@landwehr-software.de>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1.9
  */
 class TActiveTableCellEventParameter extends TCallbackEventParameter

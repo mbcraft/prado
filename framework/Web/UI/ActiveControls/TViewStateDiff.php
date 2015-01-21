@@ -6,14 +6,16 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * Calculates the viewstate changes during the request.
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 abstract class TViewStateDiff

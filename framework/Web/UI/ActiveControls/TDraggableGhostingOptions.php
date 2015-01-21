@@ -5,14 +5,16 @@
  * @author Christophe BOULAIN (Christophe.Boulain@gmail.com)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * @author Christophe BOULAIN (Christophe.Boulain@gmail.com)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
 class TDraggableGhostingOptions extends TEnumerable
 {

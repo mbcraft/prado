@@ -7,8 +7,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * Load callback response adapter class.
@@ -24,7 +26,7 @@ Prado::using('System.Web.UI.ActiveControls.TCallbackEventParameter');
  *
  * @author Wei Zhuo <weizhuo[at]gamil[dot]com>
  * @author Gabor Berczi <gabor.berczi@devworx.hu> (lazyload additions & progressive rendering)
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 class TActivePageAdapter extends TControlAdapter

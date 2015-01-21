@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2013-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  */
+
+namespace Prado\Web\UI\JuiControls;
 
 Prado::using('System.Web.UI.JuiControls.TJuiControlAdapter');
 Prado::using('System.Web.UI.ActiveControls.TActivePanel');
@@ -34,7 +36,7 @@ Prado::using('System.Web.UI.ActiveControls.TActivePanel');
  * $this->repeater1->dataBind();
  * </code>
  * @author Fabio Bas <ctrlaltca[at]gmail[dot]com>
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  * @since 3.3
  */
 class TJuiSelectable extends TActivePanel implements IJuiOptions, ICallbackEventHandler

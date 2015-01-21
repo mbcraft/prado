@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 Prado::using('System.Web.UI.ActiveControls.TActiveTextBox');
 
@@ -39,7 +41,7 @@ Prado::using('System.Web.UI.ActiveControls.TActiveTextBox');
  * the control not editable. This property can be also changed on callback
  *
  * @author Wei Zhuo <weizhuo[at]gmail[dot]com>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 class TInPlaceTextBox extends TActiveTextBox

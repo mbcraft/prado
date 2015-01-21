@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2013-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  */
+
+namespace Prado\Web\UI\JuiControls;
 
 /**
  * IJuiOptions interface
@@ -16,7 +18,7 @@
  * {@link TJuiControlOptions}.
  *
  * @author Fabio Bas <ctrlaltca@gmail.com>
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  * @since 3.3
  */
 interface IJuiOptions

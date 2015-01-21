@@ -5,8 +5,10 @@
  * @author Christophe BOULAIN (Christophe.Boulain@gmail.com)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * TDraggable is a control which can be dragged
@@ -24,7 +26,7 @@
  * @author Christophe BOULAIN (Christophe.Boulain@gmail.com)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
 class TDraggable extends TPanel
 {

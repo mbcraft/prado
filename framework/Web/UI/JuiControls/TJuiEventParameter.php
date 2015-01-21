@@ -6,8 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2013-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  */
+
+namespace Prado\Web\UI\JuiControls;
 
 /**
  * TJuiEventParameter class
@@ -33,7 +35,7 @@
  *
  * @author Fabio Bas <ctrlaltca[at]gmail[dot]com>
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.JuiControls
+ * @package Prado\Web\UI\JuiControls
  */
 class TJuiEventParameter extends TCallbackEventParameter
 {

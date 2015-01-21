@@ -6,9 +6,11 @@
  * @link http://www.landwehr-software.de/
  * @copyright Copyright &copy; 2009 LANDWEHR Computer und Software GmbH
  * @license http://www.pradosoft.com/license/
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @version $Id$
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * Includes the following used classes
@@ -45,7 +47,7 @@ Prado::using('System.Web.UI.ActiveControls.TCallbackEventParameter');
  * Please refer to the original documentation of the regular counterpart for usage.
  *
  * @author LANDWEHR Computer und Software GmbH <programmierung@landwehr-software.de>
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  * @version $Id$
  * @since 3.1.9
  */

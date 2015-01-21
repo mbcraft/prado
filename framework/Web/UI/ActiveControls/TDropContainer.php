@@ -6,8 +6,10 @@
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
+
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * Load active control adapter.
@@ -38,7 +40,7 @@ Prado::using('System.Web.UI.ActiveControls.TActivePanel');
  * @author Christophe BOULAIN (Christophe.Boulain@gmail.com)
  * @copyright Copyright &copy; 2008, PradoSoft
  * @license http://www.pradosoft.com/license
- * @package System.Web.UI.ActiveControls
+ * @package Prado\Web\UI\ActiveControls
  */
 class TDropContainer extends TPanel implements IActiveControl, ICallbackEventHandler
 {
