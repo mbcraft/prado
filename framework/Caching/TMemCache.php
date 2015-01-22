@@ -11,6 +11,11 @@
  */
 
 namespace Prado\Caching;
+use Prado\Exceptions\TConfigurationException;
+use Prado\Exceptions\TInvalidOperationException;
+use Prado\Prado;
+use Prado\TPropertyValue;
+use Prado\Xml\TXmlElement;
 
 /**
  * TMemCache class
@@ -159,7 +164,7 @@ class TMemCache extends TCache
 	{
 		if(!extension_loaded('memcache'))
 			throw new TConfigurationException('memcache_extension_required');
-		$this->_cache=new Memcache;
+		$this->_cache=new \Memcache;
 		$this->loadConfig($config);
 		if(count($this->_servers))
         {

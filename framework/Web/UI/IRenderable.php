@@ -6,10 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package Prado
+ * @package Prado\Web\UI
  */
 
-namespace Prado;
+namespace Prado\Web\UI;
 
 /**
  * IRenderable interface.
@@ -18,7 +18,7 @@ namespace Prado;
  * to end-users.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package Prado
+ * @package Prado\Web\UI
  * @since 3.0
  */
 interface IRenderable

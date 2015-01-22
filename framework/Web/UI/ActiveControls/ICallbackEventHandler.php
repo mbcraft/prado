@@ -6,10 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package Prado
+ * @package Prado\Web\UI\ActiveControls
  */
 
-namespace Prado;
+namespace Prado\Web\UI\ActiveControls;
 
 /**
  * ICallbackEventHandler interface.
@@ -18,7 +18,7 @@ namespace Prado;
  * interface.
  *
  * @author Wei Zhuo <weizhuo[at]gamil[dot]com>
- * @package Prado
+ * @package Prado\Web\UI\ActiveControls
  * @since 3.1
  */
 interface ICallbackEventHandler

@@ -6,10 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package Prado
+ * @package Prado\IO
  */
 
-namespace Prado;
+namespace Prado\IO;
 
 /**
  * ITextWriter interface.
@@ -17,7 +17,7 @@ namespace Prado;
  * This interface must be implemented by writers.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package Prado
+ * @package Prado\IO
  * @since 3.0
  */
 interface ITextWriter

@@ -10,10 +10,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package Prado
+ * @package Prado\Util
  */
 
-namespace Prado;
+namespace Prado\Util;
 
 /**
  * IBehavior interfaces is implemented by instance behavior classes.
@@ -23,7 +23,7 @@ namespace Prado;
  * class.  Objects may signal behaviors through dynamic events.
  *
  * @author Brad Anderson <javalizard@mac.com>
- * @package Prado
+ * @package Prado\Util
  * @since 3.2.3
  */
 interface IBehavior extends IBaseBehavior

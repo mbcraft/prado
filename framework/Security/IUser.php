@@ -6,10 +6,10 @@
  * @link http://www.pradosoft.com/
  * @copyright Copyright &copy; 2005-2014 PradoSoft
  * @license http://www.pradosoft.com/license/
- * @package Prado
+ * @package Prado\Security
  */
 
-namespace Prado;
+namespace Prado\Security;
 
 /**
  * IUser interface.
@@ -17,7 +17,7 @@ namespace Prado;
  * This interface must be implemented by user objects.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
- * @package Prado
+ * @package Prado\Security
  * @since 3.0
  */
 interface IUser

@@ -10,14 +10,18 @@
  */
 
 namespace Prado\Web\UI;
-
-Prado::using('System.Web.UI.WebControls.*');
-Prado::using('System.Web.UI.TControl');
-Prado::using('System.Web.UI.WebControls.TWebControl');
-Prado::using('System.Web.UI.TCompositeControl');
-Prado::using('System.Web.UI.TTemplateControl');
-Prado::using('System.Web.UI.TForm');
-Prado::using('System.Web.UI.TClientScriptManager');
+use Prado\Collections\TList;
+use Prado\Collections\TMap;
+use Prado\Collections\TStack;
+use Prado\Exceptions\TConfigurationException;
+use Prado\Exceptions\THttpException;
+use Prado\Exceptions\TInvalidDataValueException;
+use Prado\Exceptions\TInvalidDataTypeException;
+use Prado\Exceptions\TInvalidOperationException;
+use Prado\Prado;
+use Prado\TPropertyValue;
+use Prado\Web\UI\ActiveControls\TActivePageAdapter;
+use Prado\Web\UI\ActiveControls\TCallbackClientScript;
 
 /**
  * TPage class
@@ -141,7 +145,7 @@ class TPage extends TTemplateControl
 	/**
 	 * @var string page state persister class name
 	 */
-	private $_statePersisterClass='System.Web.UI.TPageStatePersister';
+	private $_statePersisterClass='\Prado\Web\UI\TPageStatePersister';
 	/**
 	 * @var mixed page state persister
 	 */
@@ -183,7 +187,7 @@ class TPage extends TTemplateControl
 	 */
 	public function run($writer)
 	{
-		Prado::trace("Running page life cycles",'System.Web.UI.TPage');
+		Prado::trace("Running page life cycles",'Prado\Web\UI\TPage');
 		$this->_writer = $writer;
 
 		$this->determinePostBackMode();
@@ -203,80 +207,80 @@ class TPage extends TTemplateControl
 
 	protected function processNormalRequest($writer)
 	{
-		Prado::trace("Page onPreInit()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreInit()",'Prado\Web\UI\TPage');
 		$this->onPreInit(null);
 
-		Prado::trace("Page initRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page initRecursive()",'Prado\Web\UI\TPage');
 		$this->initRecursive();
 
-		Prado::trace("Page onInitComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onInitComplete()",'Prado\Web\UI\TPage');
 		$this->onInitComplete(null);
 
-		Prado::trace("Page onPreLoad()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreLoad()",'Prado\Web\UI\TPage');
 		$this->onPreLoad(null);
-		Prado::trace("Page loadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page loadRecursive()",'Prado\Web\UI\TPage');
 		$this->loadRecursive();
-		Prado::trace("Page onLoadComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onLoadComplete()",'Prado\Web\UI\TPage');
 		$this->onLoadComplete(null);
 
-		Prado::trace("Page preRenderRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page preRenderRecursive()",'Prado\Web\UI\TPage');
 		$this->preRenderRecursive();
-		Prado::trace("Page onPreRenderComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreRenderComplete()",'Prado\Web\UI\TPage');
 		$this->onPreRenderComplete(null);
 
-		Prado::trace("Page savePageState()",'System.Web.UI.TPage');
+		Prado::trace("Page savePageState()",'Prado\Web\UI\TPage');
 		$this->savePageState();
-		Prado::trace("Page onSaveStateComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onSaveStateComplete()",'Prado\Web\UI\TPage');
 		$this->onSaveStateComplete(null);
 
-		Prado::trace("Page renderControl()",'System.Web.UI.TPage');
+		Prado::trace("Page renderControl()",'Prado\Web\UI\TPage');
 		$this->renderControl($writer);
-		Prado::trace("Page unloadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page unloadRecursive()",'Prado\Web\UI\TPage');
 		$this->unloadRecursive();
 	}
 
 	protected function processPostBackRequest($writer)
 	{
-		Prado::trace("Page onPreInit()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreInit()",'Prado\Web\UI\TPage');
 		$this->onPreInit(null);
 
-		Prado::trace("Page initRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page initRecursive()",'Prado\Web\UI\TPage');
 		$this->initRecursive();
 
-		Prado::trace("Page onInitComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onInitComplete()",'Prado\Web\UI\TPage');
 		$this->onInitComplete(null);
 
 		$this->_restPostData=new TMap;
-		Prado::trace("Page loadPageState()",'System.Web.UI.TPage');
+		Prado::trace("Page loadPageState()",'Prado\Web\UI\TPage');
 		$this->loadPageState();
-		Prado::trace("Page processPostData()",'System.Web.UI.TPage');
+		Prado::trace("Page processPostData()",'Prado\Web\UI\TPage');
 		$this->processPostData($this->_postData,true);
-		Prado::trace("Page onPreLoad()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreLoad()",'Prado\Web\UI\TPage');
 		$this->onPreLoad(null);
-		Prado::trace("Page loadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page loadRecursive()",'Prado\Web\UI\TPage');
 		$this->loadRecursive();
-		Prado::trace("Page processPostData()",'System.Web.UI.TPage');
+		Prado::trace("Page processPostData()",'Prado\Web\UI\TPage');
 		$this->processPostData($this->_restPostData,false);
-		Prado::trace("Page raiseChangedEvents()",'System.Web.UI.TPage');
+		Prado::trace("Page raiseChangedEvents()",'Prado\Web\UI\TPage');
 		$this->raiseChangedEvents();
-		Prado::trace("Page raisePostBackEvent()",'System.Web.UI.TPage');
+		Prado::trace("Page raisePostBackEvent()",'Prado\Web\UI\TPage');
 		$this->raisePostBackEvent();
-		Prado::trace("Page onLoadComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onLoadComplete()",'Prado\Web\UI\TPage');
 		$this->onLoadComplete(null);
 
-		Prado::trace("Page preRenderRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page preRenderRecursive()",'Prado\Web\UI\TPage');
 		$this->preRenderRecursive();
-		Prado::trace("Page onPreRenderComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreRenderComplete()",'Prado\Web\UI\TPage');
 		$this->onPreRenderComplete(null);
 
-		Prado::trace("Page savePageState()",'System.Web.UI.TPage');
+		Prado::trace("Page savePageState()",'Prado\Web\UI\TPage');
 		$this->savePageState();
-		Prado::trace("Page onSaveStateComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onSaveStateComplete()",'Prado\Web\UI\TPage');
 		$this->onSaveStateComplete(null);
 
-		Prado::trace("Page renderControl()",'System.Web.UI.TPage');
+		Prado::trace("Page renderControl()",'Prado\Web\UI\TPage');
 		$this->renderControl($writer);
-		Prado::trace("Page unloadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page unloadRecursive()",'Prado\Web\UI\TPage');
 		$this->unloadRecursive();
 	}
 
@@ -300,72 +304,72 @@ class TPage extends TTemplateControl
 	 */
 	protected function processCallbackRequest($writer)
 	{
-		Prado::using('System.Web.UI.ActiveControls.TActivePageAdapter');
+		Prado::using('Prado\Web\UI\ActiveControls\TActivePageAdapter');
 
 		$this->setAdapter(new TActivePageAdapter($this));
 
-        $callbackEventParameter = $this->getRequest()->itemAt(TPage::FIELD_CALLBACK_PARAMETER);
-        if(strlen($callbackEventParameter) > 0)
-            $this->_postData[TPage::FIELD_CALLBACK_PARAMETER]=TJavaScript::jsonDecode((string)$callbackEventParameter);
+		$callbackEventParameter = $this->getRequest()->itemAt(TPage::FIELD_CALLBACK_PARAMETER);
+		if(strlen($callbackEventParameter) > 0)
+			$this->_postData[TPage::FIELD_CALLBACK_PARAMETER]=TJavaScript::jsonDecode((string)$callbackEventParameter);
 
-        // Decode Callback postData from UTF-8 to current Charset
-        if (($g=$this->getApplication()->getGlobalization(false))!==null &&
-            strtoupper($enc=$g->getCharset())!='UTF-8')
-                foreach ($this->_postData as $k=>$v)
-                	$this->_postData[$k]=self::decodeUTF8($v, $enc);
+		// Decode Callback postData from UTF-8 to current Charset
+		if (($g=$this->getApplication()->getGlobalization(false))!==null &&
+			strtoupper($enc=$g->getCharset())!='UTF-8')
+				foreach ($this->_postData as $k=>$v)
+					$this->_postData[$k]=self::decodeUTF8($v, $enc);
 
-		Prado::trace("Page onPreInit()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreInit()",'Prado\Web\UI\TPage');
 		$this->onPreInit(null);
 
-		Prado::trace("Page initRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page initRecursive()",'Prado\Web\UI\TPage');
 		$this->initRecursive();
 
-		Prado::trace("Page onInitComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onInitComplete()",'Prado\Web\UI\TPage');
 		$this->onInitComplete(null);
 
 		$this->_restPostData=new TMap;
-		Prado::trace("Page loadPageState()",'System.Web.UI.TPage');
+		Prado::trace("Page loadPageState()",'Prado\Web\UI\TPage');
 		$this->loadPageState();
-		Prado::trace("Page processPostData()",'System.Web.UI.TPage');
+		Prado::trace("Page processPostData()",'Prado\Web\UI\TPage');
 		$this->processPostData($this->_postData,true);
-		Prado::trace("Page onPreLoad()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreLoad()",'Prado\Web\UI\TPage');
 		$this->onPreLoad(null);
-		Prado::trace("Page loadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page loadRecursive()",'Prado\Web\UI\TPage');
 		$this->loadRecursive();
 
-		Prado::trace("Page processPostData()",'System.Web.UI.TPage');
+		Prado::trace("Page processPostData()",'Prado\Web\UI\TPage');
 		$this->processPostData($this->_restPostData,false);
 
-		Prado::trace("Page raiseChangedEvents()",'System.Web.UI.TPage');
+		Prado::trace("Page raiseChangedEvents()",'Prado\Web\UI\TPage');
 		$this->raiseChangedEvents();
 
 
 		$this->getAdapter()->processCallbackEvent($writer);
 
 /*
-		Prado::trace("Page raisePostBackEvent()",'System.Web.UI.TPage');
+		Prado::trace("Page raisePostBackEvent()",'Prado\Web\UI\TPage');
 		$this->raisePostBackEvent();
 */
-		Prado::trace("Page onLoadComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onLoadComplete()",'Prado\Web\UI\TPage');
 		$this->onLoadComplete(null);
 
-		Prado::trace("Page preRenderRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page preRenderRecursive()",'Prado\Web\UI\TPage');
 		$this->preRenderRecursive();
-		Prado::trace("Page onPreRenderComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onPreRenderComplete()",'Prado\Web\UI\TPage');
 		$this->onPreRenderComplete(null);
 
-		Prado::trace("Page savePageState()",'System.Web.UI.TPage');
+		Prado::trace("Page savePageState()",'Prado\Web\UI\TPage');
 		$this->savePageState();
-		Prado::trace("Page onSaveStateComplete()",'System.Web.UI.TPage');
+		Prado::trace("Page onSaveStateComplete()",'Prado\Web\UI\TPage');
 		$this->onSaveStateComplete(null);
 
 /*
-		Prado::trace("Page renderControl()",'System.Web.UI.TPage');
+		Prado::trace("Page renderControl()",'Prado\Web\UI\TPage');
 		$this->renderControl($writer);
 */
 		$this->getAdapter()->renderCallbackResponse($writer);
 
-		Prado::trace("Page unloadRecursive()",'System.Web.UI.TPage');
+		Prado::trace("Page unloadRecursive()",'Prado\Web\UI\TPage');
 		$this->unloadRecursive();
 	}
 
@@ -478,7 +482,7 @@ class TPage extends TTemplateControl
 	 */
 	public function validate($validationGroup=null)
 	{
-		Prado::trace("Page validate()",'System.Web.UI.TPage');
+		Prado::trace("Page validate()",'Prado\Web\UI\TPage');
 		$this->_validated=true;
 		if($this->_validators && $this->_validators->getCount())
 		{
@@ -592,7 +596,7 @@ class TPage extends TTemplateControl
 			if(($pos=strrpos($className,'.'))!==false)
 				$className=substr($className,$pos+1);
 
- 			if(!class_exists($className,false) || ($className!=='TClientScriptManager' && !is_subclass_of($className,'TClientScriptManager')))
+			if(!class_exists($className,false) || ($className!=='TClientScriptManager' && !is_subclass_of($className,'TClientScriptManager')))
 				throw new THttpException(404,'page_csmanagerclass_invalid',$classPath);
 
 			$this->_clientScript=new $className($this);
@@ -769,7 +773,7 @@ class TPage extends TTemplateControl
 	 */
 	protected function loadPageState()
 	{
-		Prado::trace("Loading state",'System.Web.UI.TPage');
+		Prado::trace("Loading state",'Prado\Web\UI\TPage');
 		$state=$this->getStatePersister()->load();
 		$this->loadStateRecursive($state,$this->getEnableViewState());
 	}
@@ -779,7 +783,7 @@ class TPage extends TTemplateControl
 	 */
 	protected function savePageState()
 	{
-		Prado::trace("Saving state",'System.Web.UI.TPage');
+		Prado::trace("Saving state",'Prado\Web\UI\TPage');
 		$state=&$this->saveStateRecursive($this->getEnableViewState());
 		$this->getStatePersister()->save($state);
 	}
@@ -1214,89 +1218,89 @@ class TPage extends TTemplateControl
 		if ($this->_writer)
 			$this->Response->write($this->_writer->flush());
 	}
-        
-        /**
-         * Function to update view controls with data in a given AR object.
-         * View controls and AR object need to have the same name in IDs and Attrs respectively.
-         * @param TActiveRecord $arObj
-         * @param Boolean $throwExceptions Wheter or not to throw exceptions
-         * @author Daniel Sampedro <darthdaniel85@gmail.com>
-         */
-        public function tryToUpdateView($arObj, $throwExceptions = false)
-        {
-                $objAttrs = get_class_vars(get_class($arObj));
-                foreach (array_keys($objAttrs) as $key)
-                {
-                        try
-                        {
-                                if ($key != "RELATIONS")
-                                {
-                                        $control = $this->{$key};
-                                        if ($control instanceof TTextBox)
-                                                $control->Text = $arObj->{$key};
-                                        elseif ($control instanceof TCheckBox)
-                                                $control->Checked = (boolean) $arObj->{$key};
-                                        elseif ($control instanceof TDatePicker)
-                                                $control->Date = $arObj->{$key};
-                                }
-                                else
-                                {
-                                        foreach ($objAttrs["RELATIONS"] as $relKey => $relValues)
-                                        {
-                                                $relControl = $this->{$relKey};
-                                                switch ($relValues[0])
-                                                {
-                                                        case TActiveRecord::BELONGS_TO:
-                                                        case TActiveRecord::HAS_ONE:
-                                                                $relControl->Text = $arObj->{$relKey};
-                                                                break;
-                                                        case TActiveRecord::HAS_MANY:
-                                                                if ($relControl instanceof TListControl)
-                                                                {
-                                                                        $relControl->DataSource = $arObj->{$relKey};
-                                                                        $relControl->dataBind();
-                                                                }
-                                                                break;
-                                                }
-                                        }
-                                        break;
-                                }
-                        } catch (Exception $ex)
-                        {
-                                if ($throwExceptions)
-                                        throw $ex;
-                        }
-                }
-        }
+		
+	/**
+	 * Function to update view controls with data in a given AR object.
+	 * View controls and AR object need to have the same name in IDs and Attrs respectively.
+	 * @param TActiveRecord $arObj
+	 * @param Boolean $throwExceptions Wheter or not to throw exceptions
+	 * @author Daniel Sampedro <darthdaniel85@gmail.com>
+	 */
+	public function tryToUpdateView($arObj, $throwExceptions = false)
+	{
+		$objAttrs = get_class_vars(get_class($arObj));
+		foreach (array_keys($objAttrs) as $key)
+		{
+			try
+			{
+				if ($key != "RELATIONS")
+				{
+					$control = $this->{$key};
+					if ($control instanceof \Prado\Web\UI\WebControls\TTextBox)
+						$control->Text = $arObj->{$key};
+					elseif ($control instanceof \Prado\Web\UI\WebControls\TCheckBox)
+						$control->Checked = (boolean) $arObj->{$key};
+					elseif ($control instanceof \Prado\Web\UI\WebControls\TDatePicker)
+						$control->Date = $arObj->{$key};
+				}
+				else
+				{
+					foreach ($objAttrs["RELATIONS"] as $relKey => $relValues)
+					{
+						$relControl = $this->{$relKey};
+						switch ($relValues[0])
+						{
+							case TActiveRecord::BELONGS_TO:
+							case TActiveRecord::HAS_ONE:
+								$relControl->Text = $arObj->{$relKey};
+								break;
+							case TActiveRecord::HAS_MANY:
+								if ($relControl instanceof \Prado\Web\UI\WebControls\TListControl)
+								{
+									$relControl->DataSource = $arObj->{$relKey};
+									$relControl->dataBind();
+								}
+								break;
+						}
+					}
+					break;
+				}
+			} catch (\Exception $ex)
+			{
+				if ($throwExceptions)
+					throw $ex;
+			}
+		}
+	}
 
-        /**
-         * Function to try to update an AR object with data in view controls.
-         * @param TActiveRecord $arObj
-         * @param Boolean $throwExceptions Wheter or not to throw exceptions
-         * @author Daniel Sampedro <darthdaniel85@gmail.com>
-         */
-        public function tryToUpdateAR($arObj, $throwExceptions = false)
-        {
-                $objAttrs = get_class_vars(get_class($arObj));
-                foreach (array_keys($objAttrs) as $key)
-                {
-                        try
-                        {
-                                if ($key == "RELATIONS")
-                                        break;
-                                $control = $this->{$key};
-                                if ($control instanceof TTextBox)
-                                        $arObj->{$key} = $control->Text;
-                                elseif ($control instanceof TCheckBox)
-                                        $arObj->{$key} = $control->Checked;
-                                elseif ($control instanceof TDatePicker)
-                                        $arObj->{$key} = $control->Date;
-                        } catch (Exception $ex)
-                        {
-                                if ($throwExceptions)
-                                        throw $ex;
-                        }
-                }
-        }
+	/**
+	 * Function to try to update an AR object with data in view controls.
+	 * @param TActiveRecord $arObj
+	 * @param Boolean $throwExceptions Wheter or not to throw exceptions
+	 * @author Daniel Sampedro <darthdaniel85@gmail.com>
+	 */
+	public function tryToUpdateAR($arObj, $throwExceptions = false)
+	{
+		$objAttrs = get_class_vars(get_class($arObj));
+		foreach (array_keys($objAttrs) as $key)
+		{
+			try
+			{
+				if ($key == "RELATIONS")
+					break;
+				$control = $this->{$key};
+				if ($control instanceof \Prado\Web\UI\WebControls\TTextBox)
+					$arObj->{$key} = $control->Text;
+				elseif ($control instanceof \Prado\Web\UI\WebControls\TCheckBox)
+					$arObj->{$key} = $control->Checked;
+				elseif ($control instanceof \Prado\Web\UI\WebControls\TDatePicker)
+					$arObj->{$key} = $control->Date;
+			} catch (\Exception $ex)
+			{
+				if ($throwExceptions)
+					throw $ex;
+			}
+		}
+	}
 
 }
