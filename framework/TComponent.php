@@ -14,7 +14,19 @@
  */
 
 namespace Prado;
-
+use Prado\Web\Javascripts\TJavaScriptLiteral;
+use Prado\Web\Javascripts\TJavaScriptString;
+use Prado\Util\TCallChain;
+use Prado\Util\IBehavior;
+use Prado\Util\IDynamicMethods;
+use Prado\Util\IClassBehavior;
+use Prado\Util\TClassBehaviorEventParameter;
+use Prado\Exceptions\TApplicationException;
+use Prado\Exceptions\TInvalidOperationException;
+use Prado\Exceptions\TInvalidDataTypeException;
+use Prado\Exceptions\TInvalidDataValueException;
+use Prado\Collections\TPriorityList;
+use Prado\Collections\TPriorityMap;
 /**
  * TComponent class
  *
@@ -1029,7 +1041,7 @@ class TComponent
 				$this->getEventHandlers($name)->remove($handler,$priority);
 				return true;
 			}
-			catch(Exception $e)
+			catch(\Exception $e)
 			{
 			}
 		}
@@ -1234,10 +1246,10 @@ class TComponent
 		try
 		{
 			if(eval("\$result=$expression;")===false)
-				throw new Exception('');
+				throw new \Exception('');
 			return $result;
 		}
-		catch(Exception $e)
+		catch(\Exception $e)
 		{
 			throw new TInvalidOperationException('component_expression_invalid',get_class($this),$expression,$e->getMessage());
 		}
@@ -1267,12 +1279,12 @@ class TComponent
 		{
 			ob_start();
 			if(eval($statements)===false)
-				throw new Exception('');
+				throw new \Exception('');
 			$content=ob_get_contents();
 			ob_end_clean();
 			return $content;
 		}
-		catch(Exception $e)
+		catch(\Exception $e)
 		{
 			throw new TInvalidOperationException('component_statements_invalid',get_class($this),$statements,$e->getMessage());
 		}
@@ -1465,7 +1477,7 @@ class TComponent
 					continue;
 
 				$check = null;
-				if(($behavior->isa('IInstanceCheck'))&&$check=$behavior->isinstanceof($class,$this))
+				if(($behavior->isa('\Prado\Util\IInstanceCheck'))&&$check=$behavior->isinstanceof($class,$this))
 					return true;
 				if($check===null&&($behavior->isa($class)))
 					return true;

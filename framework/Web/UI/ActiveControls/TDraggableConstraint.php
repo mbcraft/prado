@@ -16,7 +16,7 @@ namespace Prado\Web\UI\ActiveControls;
  * @license http://www.pradosoft.com/license
  * @package Prado\Web\UI\ActiveControls
  */
-class TDraggableConstraint extends TEnumerable
+class TDraggableConstraint extends \Prado\TEnumerable
 {
 	const None='None';
 	const Horizontal='Horizontal';
