@@ -66,7 +66,7 @@
     "autoload": {
         "psr-4": {
             "Prado\\": "framework"
-        },
+        }
     },
 	"support" : {
 		"forum" : "http://www.pradosoft.com/forum",
