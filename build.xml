@@ -189,7 +189,7 @@
       executable="bin/apigen.php"
       source="${build.src.dir}/framework"
       destination="${build.doc.dir}/manual"
-      exclude="*pradolite.php,*prado-cli.php,*3rdParty/*,*Javascripts/source/*,*packages.php,*JSMin.php,*I18N/core/*,*WebControls/assets/*"
+      exclude="*pradolite.php,*prado-cli.php,*Vendor/*,*Javascripts/source/*,*packages.php,*JSMin.php,*I18N/core/*,*WebControls/assets/*"
       title="PRADO v${prado.version} API Manual"
       deprecated="true"
       todo="true"
