@@ -95,6 +95,7 @@ class TDbConnection extends TComponent
 	private $_active=false;
 	private $_pdo=null;
 	private $_transaction;
+        private $_allowedOn;
 
 	/**
 	 * @var TDbMetaData
@@ -120,12 +121,13 @@ class TDbConnection extends TComponent
 	 * @param string Charset used for DB Connection (MySql & pgsql only). If not set, will use the default charset of your database server
 	 * @see http://www.php.net/manual/en/function.PDO-construct.php
 	 */
-	public function __construct($dsn='',$username='',$password='', $charset='')
+	public function __construct($dsn='',$username='',$password='', $charset='', $allowedOn='')
 	{
 		$this->_dsn=$dsn;
 		$this->_username=$username;
 		$this->_password=$password;
 		$this->_charset=$charset;
+                $this->_allowedOn=$allowedOn;
 	}
 
 	/**
@@ -296,6 +298,22 @@ class TDbConnection extends TComponent
 		$this->_charset=$value;
 		$this->setConnectionCharset();
 	}
+        
+        /**
+	 * @param string Sets the host allowed for this database connection.
+	 */    
+        public function setAllowedOn($hostname)
+        {
+            $this->_allowedOn = $hostname;
+        }
+        
+	/**
+	 * @return string The host allowed for this database connection.
+	 */
+        public function getAllowedOn()
+        {
+            return $this->_allowedOn;
+        }
 
 	/**
 	 * @return PDO the PDO instance, null if the connection is not established yet

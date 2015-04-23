@@ -56,24 +56,40 @@ class TDataSourceConfig extends TModule
 	 */
 	public function init($xml)
 	{
-		if($this->getApplication()->getConfigurationType()==TApplication::CONFIG_TYPE_PHP)
-		{
-			if(isset($xml['database']) && is_array($xml['database']))
-			{
-				$db=$this->getDbConnection();
-				foreach($xml['database'] as $name=>$value)
-					$db->setSubProperty($name,$value);
-			}
-		}
-		else
-		{
-			if($prop=$xml->getElementByTagName('database'))
-			{
-				$db=$this->getDbConnection();
-				foreach($prop->getAttributes() as $name=>$value)
-					$db->setSubproperty($name,$value);
-			}
-		}
+            if($this->getApplication()->getConfigurationType()==TApplication::CONFIG_TYPE_PHP)
+            {
+                //TODO : test
+                $dbs = $xml['database'];
+                foreach ($dbs as $db_conf)
+                {
+                    if(is_array($db_conf))
+                    {
+                        if ((isset($db_conf["AllowedOn"]) && $db_conf["AllowedOn"]==$_SERVER["HTTP_HOST"]) || !isset($db_conf["AllowedOn"]))
+                        {
+                            $db=$this->getDbConnection();
+                            foreach($db_conf as $name=>$value)
+                                    $db->setSubProperty($name,$value);
+                            return;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                $elems = $xml->getElementsByTagName('database');
+                foreach ($elems as $elem)
+                {
+                    $attr = $elem->getAttributes();
+                    if ((isset($attr["AllowedOn"]) && $attr["AllowedOn"]==$_SERVER["HTTP_HOST"]) || !isset($attr["AllowedOn"]))
+                    {
+                            $db=$this->getDbConnection();
+                            foreach($attr as $name=>$value)
+                                    $db->setSubproperty($name,$value);
+                            return;
+                    }
+
+                }
+            }
 	}
 
 	/**
