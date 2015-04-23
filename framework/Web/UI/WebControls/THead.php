@@ -145,32 +145,47 @@ class THead extends TControl
 	 */
 	public function render($writer)
 	{
-		$page=$this->getPage();
-		$title=$this->getTitle();
-		$writer->write("<head>\n<title>".THttpUtility::htmlEncode($title)."</title>\n");
-		if(($baseUrl=$this->getBaseUrl())!=='')
-			$writer->write('<base href="'.$baseUrl."\" />\n");
-		if(($icon=$this->getShortcutIcon())!=='')
-			$writer->write('<link rel="shortcut icon" href="'.$icon."\" />\n");
+            $page=$this->getPage();
+            $title=$this->getTitle();
+            $writer->write("<head>\n");
+            
+            if(($metaTags=$this->getMetaTags())!==null)
+            {
+                    foreach($metaTags as $metaTag)
+                    {
+                        if ($metaTag->getRenderBeforeTitle()) {
+                            $metaTag->render($writer);
+                            $writer->writeLine();
+                        }
+                    }
+            }
+            
+            $writer->write("<title>".THttpUtility::htmlEncode($title)."</title>\n");
+            if(($baseUrl=$this->getBaseUrl())!=='')
+                    $writer->write('<base href="'.$baseUrl."\" />\n");
+            if(($icon=$this->getShortcutIcon())!=='')
+                    $writer->write('<link rel="shortcut icon" href="'.$icon."\" />\n");
 
-		if(($metaTags=$this->getMetaTags())!==null)
-		{
-			foreach($metaTags as $metaTag)
-			{
-				$metaTag->render($writer);
-				$writer->writeLine();
-			}
-		}
-		$cs=$page->getClientScript();
-		$cs->renderStyleSheetFiles($writer);
-		$cs->renderStyleSheets($writer);
-		if($page->getClientSupportsJavaScript())
-		{
-			$cs->renderHeadScriptFiles($writer);
-			$cs->renderHeadScripts($writer);
-		}
-		parent::render($writer);
-		$writer->write("</head>\n");
+            if(($metaTags=$this->getMetaTags())!==null)
+            {
+                    foreach($metaTags as $metaTag)
+                    {
+                        if (!$metaTag->getRenderBeforeTitle()) {
+                            $metaTag->render($writer);
+                            $writer->writeLine();
+                        }
+                    }
+            }
+            $cs=$page->getClientScript();
+            $cs->renderStyleSheetFiles($writer);
+            $cs->renderStyleSheets($writer);
+            if($page->getClientSupportsJavaScript())
+            {
+                    $cs->renderHeadScriptFiles($writer);
+                    $cs->renderHeadScripts($writer);
+            }
+            parent::render($writer);
+            $writer->write("</head>\n");
 	}
 }
 
@@ -213,6 +228,10 @@ class TMetaTag extends TComponent
          * @var string charset attribute of the meta tag
          */
         private $_charset='';
+        /**
+         * @var boolean true if meta tag should be rendered before title, false otherwise
+         */
+        private $_renderBeforeTitle=false;
 
 	/**
 	 * @return string id of the meta tag
@@ -309,6 +328,22 @@ class TMetaTag extends TComponent
 	{
 		$this->_charset=$value;
 	}
+        
+        /**
+	 * @return boolean true if this tag should be rendered before title, false otherwise
+	 */
+	public function getRenderBeforeTitle()
+	{
+		return $this->_renderBeforeTitle;
+	}
+
+	/**
+	 * @param boolean sets the rendering priority of this tag
+	 */
+	public function setRenderBeforeTitle($value)
+	{
+		$this->_renderBeforeTitle=$value;
+	}
 
 	/**
 	 * Renders the meta tag.
@@ -316,20 +351,20 @@ class TMetaTag extends TComponent
 	 */
 	public function render($writer)
 	{
-		if($this->_id!=='')
-			$writer->addAttribute('id',$this->_id);
-		if($this->_name!=='')
-			$writer->addAttribute('name',$this->_name);
-		if($this->_httpEquiv!=='')
-			$writer->addAttribute('http-equiv',$this->_httpEquiv);
-		if($this->_scheme!=='')
-			$writer->addAttribute('scheme',$this->_scheme);
+                if($this->_id!=='')
+                        $writer->addAttribute('id',$this->_id);
+                if($this->_name!=='')
+                        $writer->addAttribute('name',$this->_name);
+                if($this->_httpEquiv!=='')
+                        $writer->addAttribute('http-equiv',$this->_httpEquiv);
+                if($this->_scheme!=='')
+                        $writer->addAttribute('scheme',$this->_scheme);
                 if($this->_charset!=='')
-			$writer->addAttribute('charset',$this->_charset);
+                        $writer->addAttribute('charset',$this->_charset);
                 if($this->_content!=='')
                         $writer->addAttribute('content',$this->_content);
-		$writer->renderBeginTag('meta');
-		$writer->renderEndTag();
+                $writer->renderBeginTag('meta');
+                $writer->renderEndTag();
 	}
 }
 
