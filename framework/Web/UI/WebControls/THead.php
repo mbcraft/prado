@@ -209,6 +209,10 @@ class TMetaTag extends TComponent
 	 * @var string scheme attribute of the meta tag
 	 */
 	private $_scheme='';
+        /**
+         * @var string charset attribute of the meta tag
+         */
+        private $_charset='';
 
 	/**
 	 * @return string id of the meta tag
@@ -289,6 +293,22 @@ class TMetaTag extends TComponent
 	{
 		$this->_scheme=$value;
 	}
+           
+        /**
+	 * @return string charset attribute of the meta tag
+	 */
+	public function getCharset()
+	{
+		return $this->_charset;
+	}
+
+	/**
+	 * @param string charset attribute of the meta tag
+	 */
+	public function setCharset($value)
+	{
+		$this->_charset=$value;
+	}
 
 	/**
 	 * Renders the meta tag.
@@ -304,7 +324,10 @@ class TMetaTag extends TComponent
 			$writer->addAttribute('http-equiv',$this->_httpEquiv);
 		if($this->_scheme!=='')
 			$writer->addAttribute('scheme',$this->_scheme);
-		$writer->addAttribute('content',$this->_content);
+                if($this->_charset!=='')
+			$writer->addAttribute('charset',$this->_charset);
+                if($this->_content!=='')
+                        $writer->addAttribute('content',$this->_content);
 		$writer->renderBeginTag('meta');
 		$writer->renderEndTag();
 	}
